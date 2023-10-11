@@ -1,0 +1,147 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling Header */
+header {
+    background-color: brown;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Styling Hero Section */
+.hero {
+    background-image: url(fotobackground.jpeg); /* Ganti dengan URL gambar latar belakang Anda */
+    background-size: cover;
+    text-align: center;
+    padding: 15rem;
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: -225px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Styling Jadwal Section */
+.jadwal {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+    color: brown;
+}
+
+.jadwal h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Styling Tim Section */
+.tim {
+    padding: 2rem;
+    text-align: center;
+}
+
+.tim h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Styling Kontak Section */
+.kontak {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+    color: brown;
+
+}
+
+.kontak h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.kontak p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+address {
+    font-style: normal;
+}
+
+/* Styling Footer */
+footer {
+    background-color: brown;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Variabel untuk mode terang */
+:root {
+    --background-color-light: #fff;
+    --text-color-light: #000;
+}
+
+/* Variabel untuk mode gelap */
+.dark-mode {
+    --background-color-light: #000;
+    --text-color-light: #fff;
+}
+
+body {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+}
+
+/* Variabel untuk warna teks dalam mode terang */
+:root {
+    --text-color-light:#000; /* Warna teks dalam mode terang */
+}
+
+/* Variabel untuk warna teks dalam mode gelap */
+.dark-mode {
+    --text-color-light:#fff; /* Warna teks dalam mode gelap */
+}
+
+body {
+    color: var(--text-color-light);
+}
+
+h1, h2, p {
+    color: var(--text-color-light)#fff;
+}

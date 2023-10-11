@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Tim</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const pendaftaranForm = document.getElementById("pendaftaran-tim-form");
+            const hasilDaftar = document.getElementById("hasil-daftar");
+
+            pendaftaranForm.addEventListener("submit", function(event) {
+                event.preventDefault(); // Mencegah pengiriman formulir standar.
+
+                // Ambil data dari formulir
+                const namaTim = pendaftaranForm.nama_tim.value;
+                const jumlahPemain = pendaftaranForm.jumlah_pemain.value;
+                const alamatTim = pendaftaranForm.alamat_tim.value;
+
+                // Tampilkan hasil pendaftaran di dalam elemen hasil-daftar
+                hasilDaftar.innerHTML = `
+                    <h2>Hasil Pendaftaran Tim Futsal:</h2>
+                    <p>Nama Tim: ${namaTim}</p>
+                    <p>Jumlah Pemain: ${jumlahPemain}</p>
+                    <p>Alamat Tim: ${alamatTim}</p>
+                `;
+
+                // Bersihkan formulir
+                pendaftaranForm.reset();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Pendaftaran Tim Futsal</h1>
+
+    <!-- Formulir pendaftaran tim -->
+    <form id="pendaftaran-tim-form">
+        <label for="nama_tim">Nama Tim:</label>
+        <input type="text" id="nama_tim" name="nama_tim" required>
+
+        <label for="jumlah_pemain">Jumlah Pemain:</label>
+        <input type="text" id="jumlah_pemain" name="jumlah_pemain" required>
+
+        <label for="alamat_tim">Alamat Tim:</label>
+        <input type="text" id="alamat_tim" name="alamat_tim" required>
+
+        <input type="submit" value="Daftar">
+    </form>
+
+    <!-- Elemen untuk menampilkan hasil -->
+    <div id="hasil-daftar"></div>
+</body>
+</html>
